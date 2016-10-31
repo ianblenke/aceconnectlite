@@ -1,0 +1,84 @@
+{
+"debuglevel": "ERROR",
+"dialaroundnums": "|1234567890|",
+"http": {
+	"port": 1234,
+	"port-dashboard" : 1234,
+	"port-user" : 1234
+},
+"zendesk": {
+    "ticket": "yes",
+	"apiurl": "http://11.22.33.444:9090/api/v2",
+	"userid": "user@email.org",
+	"token": "xxx1234xxxxxx1234xxxxxx1234xxxxxx1234xxx",
+	"proxy" : {
+		"host" : "some.proxy.org",
+		"port" : 80,
+		"tunnel" : "true"
+		}
+},
+"asterisk": {
+    "sip": {
+		"host" : "insert asterisk hostname here",
+		"realm" : "insert asterisk realm here",
+		"stun" : "[]",
+		"wsport" : 443,
+		"outboundurl_host": "",
+		"outboundurl_port": "",
+		"disable_3gpp_early_ims": false,
+		"disable_debug_message": false,
+		"cache_media_stream": true,
+		"disable_call_button_options": false,
+		"disable_video": false,
+		"enable_rtcweb_breaker": false,
+		"channel": "SIP",
+		"websocket": "wss://insert web socket host:443/ws"
+	},
+	"ami" : {
+		"id" : "user",
+		"passwd" : "password",
+		"port" : 1234
+	},
+	"ari" : {
+	    "id" : "user2",
+		"passwd" : "password2"
+	}
+},
+"extensions": {
+	    "startnumber" : "4001",
+		"endnumber" : "4010",
+		"secret" : "secret1"
+},
+"queues": {
+    "inbound" : {
+		"name" : "InboundQueue"
+		},
+	"complaint" : {
+	    "number" : "123456"
+	},
+	"information" : {
+	    "number" : "123456"
+	}
+},
+"vrscheck": {
+		"verify" : "yes",
+        "url" : "http://vrs vrs check hostname here",
+        "port" : 1234
+},
+"agentservice": {
+		"verify" : "yes",
+        "url" : "http://insert agent verify hostname here",
+        "port" : 1234
+},
+"scriptservice": {
+        "verify" : "yes",
+        "url" : "http://insert script hostname here",
+        "port" : 8084
+},
+"jsonwebtoken": {
+	"encoding" : "base64",
+    "secretkey" : "create a secret key",
+	"timeout" : 15000,
+	"handshake" : true
+}
+}
